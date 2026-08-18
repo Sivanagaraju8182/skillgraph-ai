@@ -17,8 +17,11 @@ app.use(express.json());
 
 // API Routes
 app.use("/api/developers", developersRouter);
-app.use("/api/developer-skills", developerSkillsRouter);
-app.use("/api/developer-technologies", developerTechnologiesRouter);
+app.use("/api/developers", developerSkillsRouter);
+app.use(
+  "/api/developer-technologies",
+  developerTechnologiesRouter
+);
 app.use("/api/recommendations", recommendationsRouter);
 app.use("/api/job-roles", jobRolesRouter);
 
