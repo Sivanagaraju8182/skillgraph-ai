@@ -1,18 +1,26 @@
 {
-  "name": "backend",
+  "name": "skillgraph-ai-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "SkillGraph AI backend using Express and CognoDB",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "seed": "node src/seed/seed.js",
+    "dev": "node src/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "graph-database",
+    "cognodb",
+    "neo4j",
+    "express",
+    "nodejs"
+  ],
+  "author": "Jagadeesh",
+  "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "neo4j-driver": "^6.2.0"
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "neo4j-driver": "^6.0.0"
   }
 }
