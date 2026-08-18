@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://skillgraph-ai-vifh.onrender.com";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -16,8 +16,9 @@ export const getDevelopers = async () => {
 
 export const getDeveloperSkills = async (name) => {
   const response = await api.get(
-    `/api/developer-skills/${encodeURIComponent(name)}`
+    `/api/developers/${encodeURIComponent(name)}`
   );
+
   return response.data;
 };
 
@@ -25,6 +26,7 @@ export const getDeveloperTechnologies = async (name) => {
   const response = await api.get(
     `/api/developer-technologies/${encodeURIComponent(name)}`
   );
+
   return response.data;
 };
 
@@ -32,6 +34,7 @@ export const getRecommendations = async (name) => {
   const response = await api.get(
     `/api/recommendations/${encodeURIComponent(name)}`
   );
+
   return response.data;
 };
 
